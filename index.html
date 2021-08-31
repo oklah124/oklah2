@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Gateway pembayaran</title><meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="./plugins/css/reset.css"><link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/index.css">
+<style>
+				body,html{overflow:hidden;font-size:14px;background-color:#8533ff}body,div.container,html{width:100%;height:100vh;max-height:100vh;overflow-y:auto}div.container{padding-bottom:50px;background-color:#8533ff;background-size:cover;background-position:center center}.font10{font-size:10px}.font11{font-size:11px}.font12{font-size:12px}.font13{font-size:13px}.font14{font-size:14px}.font15{font-size:15px}.font16{font-size:16px}.font17{font-size:17px}.font18{font-size:18px}div.halfpxline{width:200%;height:1px;background-color:rgba(255,255,255,.3);-webkit-transform:translateX(-25%) scale(.5);transform:translateX(-25%) scale(.5)}.page-footer{position:fixed;left:0;right:0;bottom:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:48px;padding:0 20px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;color:#fff;background-color:#8533ff;-webkit-box-shadow:0 -2px 10px 0 rgba(0,0,0,.16);box-shadow:0 -2px 10px 0 rgba(0,0,0,.16)}.page-footer.small .text{white-space:nowrap;font-size:11px}.page-footer img{margin-right:10px}.page-footer .text{-webkit-box-flex:2;-webkit-flex-grow:2;-ms-flex-positive:2;flex-grow:2}.page-footer .back-to-last{width:65px;line-height:35px;border-radius:17px;background-color:#b380ff;color:#fff;font-size:14px;text-align:center}a:active{text-decoration:none}
+				
+				.index-page.container{padding-top:20px}.index-page .header{padding:0 24px;color:#fff;font-family:"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.index-page .header,.index-page .header .language{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.index-page .header .language span{padding:0 10px}.index-page .card-info{padding:33px 24px;color:#fff;text-align:center}.index-page .card-info .text{margin:4px 0;color:rgba(255,255,255,.7);line-height:22px}.index-page .card-footer-info,.index-page .card-info .total-number{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.index-page .card-info .total-number{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.index-page .card-info .total-number .number{margin-left:10px;font-size:36px;font-family:effrafonabold}.index-page .card-footer-info{padding:13px 24px;color:rgba(255,255,255,.7);-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.index-page .card-footer-info .key{line-height:12px}.index-page .card-footer-info .value{margin-top:2px;line-height:17px}.index-page .list-container{min-height:calc(100vh - 234.4px);background-color:#fff;border-top-left-radius:8px;border-top-right-radius:8px}.index-page .list-container .list-item .menu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:20px 24px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.index-page .list-container .list-item .menu.active{background-color:#f0f0f0}.index-page .list-container .list-item .menu.active .arrow{-webkit-transform:rotateZ(90deg);transform:rotateZ(90deg)}.index-page .list-container .list-item .menu .title{margin-left:12px;-webkit-box-flex:2;-webkit-flex-grow:2;-ms-flex-positive:2;flex-grow:2;font-size:16px}.index-page .list-container .list-item>.halfpxline{background-color:rgba(0,0,0,.1)}.index-page .list-container .list-item .menu+.menu-items{display:none}.index-page .list-container .list-item .menu.active+.menu-items{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;border-bottom:6px solid #ebebeb}.index-page .list-container .list-item .menu-items,.index-page .list-container .list-item .menu-items .item .item-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.index-page .list-container .list-item .menu-items{padding:0 24px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.index-page .list-container .list-item .menu-items>a{width:50%;display:inline-block;color:#888}.index-page .list-container .list-item .menu-items .item .item-content{padding:16px 0}.index-page .list-container .list-item .menu-items .item img{margin-right:10px}.index-page .list-container .list-item .menu-items .halfpxline{background-color:rgba(0,0,0,.1)}
+				
+				@font-face {
+    font-family: 'effrafona';
+    src: url("./../font/Effra.ttf");
+}
+@font-face {
+    font-family: 'effrafonabold';
+    src: url("./../font/EffraBold.ttf");
+}
+*{word-wrap:break-word; box-sizing: border-box;}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset{margin:0;padding:0}
+ul,ol,dl{list-style-type:none}
+html,body{*position:static}
+html{font-family: effrafona;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button{overflow: visible;vertical-align:middle;outline:none}
+body,th,td,button,input,select,textarea{font-family:"effrafona";font-size:12px;color: #333;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:grayscale}
+body{line-height:1.6}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+a,area{outline:none;blr:expression(this.onFocus=this.blur())}
+a{text-decoration:none;cursor: pointer}
+a:hover{text-decoration:underline;outline:none}
+a.ie6:hover{zoom:1}
+a:focus{outline:none}
+a:hover,a:active{outline:none}:focus{outline:none}
+sub,sup{vertical-align:baseline}
+button,input[type="button"], input[type="submit"] {line-height:normal !important}
+/*img*/
+img{border:0;vertical-align:middle}
+a img,img{-ms-interpolation-mode:bicubic}
+.img-responsive{max-width: 100%;height: auto}
+
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+/*HTML5 reset*/
+header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figure,figcaption,legend{display:block;margin:0;padding:0}time{display:inline}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+legend{width:100%;margin-bottom:20px;font-size:21px;line-height:40px;border:0;border-bottom:1px solid #e5e5e5}
+legend small{font-size:15px;color:#999}
+svg:not(:root) {overflow: hidden}
+fieldset {border-width:0;padding: 0.35em 0.625em 0.75em;margin: 0 2px;border: 1px solid #c0c0c0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {height: auto}
+input[type="search"] {-webkit-appearance: textfield; /* 1 */-moz-box-sizing: content-box;-webkit-box-sizing: content-box; /* 2 */box-sizing: content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {-webkit-appearance: none}
+/*
+Name:			style_clearfix
+Example:		class="clearfix|cl"
+Explain:		Clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
+*/
+.cl:after,.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.cl,.clearfix{zoom:1}
+</style>
+</head>
+<body>
+				<div class="container index-page"><div><div class="header"><div class="language"><img src="./img/language@2x.png" style="width: 22px;height: 22px;" alt=""><span>Indonesian</span><img class="arrow" src="./img/arrow@2x.png" style="width:12px;height:8px;" alt=""></div><div class="font13">Berlaku 24 jam</div></div><div class="card-info"><div class="total-text"><div class="font12 text">Total Penmbayaran</div><div class="total-number"><img src="./img/idr@2x.png" style="width: 44px;height: 26px;" alt=""><div class="number"></div></div></div></div><div class="halfpxline"></div><div class="card-footer-info"><div><div class="key font10">Nomor Pesanan:</div><div class="value no"></div></div><div><div class="key font10">Barang:</div><div class="value barang"></div></div></div></div><div class="list-container"><div class="list-item va"><div class="menu active"><img src="./img/list/bank@2x.png" style="width: 24px;height: 24px;" alt=""><div class="title">Virtual Account</div><img src="./img/list/arrow@2x.png" style="width: 8px;height: 14px;" alt="" class="arrow"></div><div class="menu-items"></div><div class="halfpxline"></div></div><div class="list-item bank"><div class="menu active"><img src="./img/list/bank@2x.png" style="width: 24px;height: 24px;" alt=""><div class="title">Transfer Manual</div><img src="./img/list/arrow@2x.png" style="width: 8px;height: 14px;" alt="" class="arrow"></div><div class="menu-items"></div><div class="halfpxline"></div></div><div class="list-item wallet"><div class="menu active"><img src="./img/list/e-wallet@2x.png" style="width: 23px;height: 22px;" alt=""><div class="title">E-Wallet</div><img src="./img/list/arrow@2x.png" style="width: 8px;height: 14px;" alt="" class="arrow"></div><div class="menu-items"></div><div class="halfpxline"></div></div><div class="list-item store"><div class="menu active"><img src="./img/list/store@2x.png" style="width: 24px;height: 24px;" alt=""><div class="title">AlfaMart</div><img src="./img/list/arrow@2x.png" style="width: 8px;height: 14px;" alt="" class="arrow"></div><div class="menu-items"></div><div class="halfpxline"></div></div></div><div class="page-footer small"><img src="./img/lock.png" style="width: 26px;height: 29px;" alt=""><div class="font16 text">THIS IS A SECURE TRANSACTION</div><div class="back-to-last">KEMBALI</div></div></div><script src="./plugins/js/jquery.min.js"></script><script src="./js/index.js?v=20210115"></script>
+				</body>
+				</html>
